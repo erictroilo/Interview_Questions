@@ -1,3 +1,10 @@
+'''
+Question 1:
+Write a function which can take both a search string input and a list of search results and return
+a list of 3 or less search results for the user to choose from that are the closest match to the search input.
+Case insensitive.
+'''
+
 def threeKeywordSuggestions(repository, customer_query):
     ''' Print out the best keyword suggestions in alphabetical order '''
     # convert all to uppercase so the repository can properly be put in alphabetical order

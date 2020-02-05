@@ -1,3 +1,12 @@
+'''
+Question 2:
+A square grid of satellites receive periodic updates. When a satellite receives an update it can update other
+satellites directly adjacent to it that have not yet received the update. When a satellite receives a new update
+it can update its adjacent neighbors the following day. Write a program to update a square grid of satellites
+and determine how many days it will take to update all satellites in the grid. Satellites with updates will be
+indicated with a 1 and satellites without the update a 0. If the grid cannot be fully updated return -1.
+'''
+
 class satellite(object):
     def __init__(self, grid, row, column):
         self.row           = row
@@ -97,6 +106,9 @@ class satellite(object):
             days += 1
             if print_grid: self.printGrid(days)
             self.resetDay()
+
+        if days == 0:
+            return -1
         return days
 
 

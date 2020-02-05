@@ -33,10 +33,15 @@ class MyTestCase(unittest.TestCase):
         g = [[0, 0, 0, 1],
              [0, 0, 0, 0],
              [0, 1, 0, 0],
-             [0, 0, 0, 0], ]
+             [0, 0, 0, 0]]
         test_sat = satellite(g, 4, 4)
         self.assertEqual(test_sat.runUpdatingSequence(print_grid=False), 3)
 
+    def test_run_updating_sequence_with_all_zeros(self):
+        g = [[0, 0],
+             [0, 0]]
+        test_sat = satellite(g, 2, 2)
+        self.assertEqual(test_sat.runUpdatingSequence(print_grid=False), -1)
 
 if __name__ == '__main__':
     unittest.main()
